@@ -4,6 +4,12 @@
 
 body {
     margin: 0;
+    font-family: "Source Sans 3", sans-serif;
+}
+
+h2,
+h4 {
+    font-family: "Playfair Display", serif;
 }
 
 .container {
@@ -58,6 +64,7 @@ body {
 }
 
 .hero-section h1 {
+    line-height: 1.1;
     margin-top: 0;
     margin-bottom: 0;
     color: white;
@@ -71,23 +78,23 @@ body {
 }
 
 .hero-left-column p {
-    margin-top: 0;
+    margin-top: 1rem;
     margin-bottom: 0;
     font-size: 1rem;
     color: rgb(221, 214, 214);
 }
 
 .hero-left-column button {
-    margin-top: 0;
+    margin-top: 1rem;
     align-self: flex-start;
     flex: 0 0 auto;
     border-radius: 8px;
     border: none;
-    font-size: 1.2rem;
-    font-weight: 900;
+    font-size: 1rem;
+    font-weight: 700;
     color: white;
     background-color: rgb(67, 104, 255);
-    padding: 8px 16px;
+    padding: 6px 24px;
 }
 
 .hero-image img {
@@ -159,9 +166,52 @@ h4 {
     margin-right: 3rem;
 }
 
+.call-to-action-section {
+    display: flex;
+    justify-content: center;
+}
+
+.cta-content {
+    display: flex;
+    background-color: rgb(67, 133, 232);
+    margin: 7rem;
+    justify-content: space-between;
+    padding: 36px 80px;
+    width: 100%;
+    gap: 12rem;
+    border-radius: 8px;
+}
+
+.cta-content h5,
+.cta-content p {
+    margin: 0;
+}
+
+h5 {
+    font-size: 1.2rem;
+    color: white;
+}
+
+.cta-content p {
+    color: azure;
+}
+
+.cta-content button {
+    justify-self: flex-end;
+    align-self: center;
+    font-size: 1rem;
+    padding: 4px 22px;
+    border-radius: 8px;
+    border: 2px solid white;
+    color: white;
+    background-color: rgb(67, 133, 232);
+    font-weight: 700;
+}
+
 .footer {
     display: flex;
     justify-content: center;
     color: white;
     background-color: var(--navy-bg);
+    padding: 24px;
 }
