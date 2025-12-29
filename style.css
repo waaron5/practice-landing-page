@@ -1,10 +1,24 @@
 :root {
+    --bg: #ffffff;
+    --bg-secondary: gainsboro;
+    --text: #111827;
     --navy-bg: rgb(48, 48, 64);
+    --blue: rgb(67, 133, 232);
+}
+
+[data-theme="dark"] {
+    --bg: #0f172a;
+    --bg-secondary: #0f172a;
+    --text: #e5e7eb;
+    --navy-bg: #111827;
+    --card: #1f2937;
 }
 
 body {
     margin: 0;
     font-family: "Source Sans 3", sans-serif;
+    background: var(--bg);
+    color: var(--text);
 }
 
 h2,
@@ -49,6 +63,36 @@ h4 {
 .nav a {
     text-decoration: none;
     color: white;
+    border-bottom: 2px solid transparent;
+    transition: 0.2s;
+}
+
+.nav a:hover {
+    border-bottom: 2px solid white;
+}
+
+.theme-toggle {
+    background: none;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.theme-toggle .icon {
+    width: 20px;
+    height: 20px;
+    display: none;
+    filter: brightness(0) invert(1);
+}
+
+:root[data-theme="dark"] .theme-toggle .icon-moon {
+    display: block;
+}
+
+:root:not([data-theme="dark"]) .theme-toggle .icon-sun {
+    display: block;
 }
 
 .hero-section {
@@ -84,7 +128,8 @@ h4 {
     color: rgb(221, 214, 214);
 }
 
-.hero-left-column button {
+.hero-left-column .button {
+    text-decoration: none;
     margin-top: 1rem;
     align-self: flex-start;
     flex: 0 0 auto;
@@ -93,7 +138,7 @@ h4 {
     font-size: 1rem;
     font-weight: 700;
     color: white;
-    background-color: rgb(67, 104, 255);
+    background-color: var(--blue);
     padding: 6px 24px;
 }
 
@@ -107,7 +152,7 @@ h4 {
 }
 
 .feature-card-section {
-    background-color: white;
+    background-color: var(--bg);
 }
 
 .feature-card-section .container {
@@ -143,7 +188,7 @@ h2 {
 }
 
 .testimonial-section {
-    background-color: gainsboro;
+    background-color: var(--bg-secondary);
 }
 
 .testimonial-section .container {
@@ -173,7 +218,7 @@ h4 {
 
 .cta-content {
     display: flex;
-    background-color: rgb(67, 133, 232);
+    background-color: var(--blue);
     margin: 7rem;
     justify-content: space-between;
     padding: 36px 80px;
@@ -196,7 +241,8 @@ h5 {
     color: azure;
 }
 
-.cta-content button {
+.cta-content .button {
+    text-decoration: none;
     justify-self: flex-end;
     align-self: center;
     font-size: 1rem;
@@ -204,8 +250,17 @@ h5 {
     border-radius: 8px;
     border: 2px solid white;
     color: white;
-    background-color: rgb(67, 133, 232);
+    background-color: var(--blue);
     font-weight: 700;
+}
+
+.button {
+    transition: 0.2s;
+}
+
+.button:hover {
+    color: var(--blue);
+    background-color: white;
 }
 
 .footer {

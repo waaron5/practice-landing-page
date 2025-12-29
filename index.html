@@ -10,6 +10,7 @@
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Source+Sans+3:wght@400;600&display=swap">
 </head>
 
+
 <body>
 
     <!-- Header -->
@@ -20,6 +21,10 @@
             </div>
             <nav class="nav">
                 <ul>
+                    <button class="theme-toggle" type="button" aria-label="Toggle theme">
+                        <img class="icon icon-sun" src="images/sun.svg" alt="">
+                        <img class="icon icon-moon" src="images/moon.svg" alt="">
+                    </button>
                     <li><a href="#">header link one</a></li>
                     <li><a href="#">header link two</a></li>
                     <li><a href="#">header link three</a></li>
@@ -35,7 +40,7 @@
                 <h1>This Website is Awesome</h1>
                 <p>This website has some subtext that goes here under the header in the hero section. its smaller, less
                     contrast, and gives valuable information.</p>
-                <button>Sign Up</button>
+                <a href="#" class="button">Sign Up</a>
             </div>
 
             <div class="hero-image">
@@ -80,13 +85,13 @@
     </section>
 
     <!-- CTA -->
-    <section class="call-to-action-section">
+    <section class="call-to-action-section" id="cta">
         <div class="container cta-content">
             <div>
                 <h5>Call to action! It's time!</h5>
                 <p>Sign up for our product by clicking right over there.</p>
             </div>
-            <button>Sign Up</button>
+            <a href="#" class="button">Sign Up</a>
         </div>
     </section>
 
@@ -97,4 +102,5 @@
         </div>
     </footer>
 
+    <script src="script.js" defer></script>
 </body>
