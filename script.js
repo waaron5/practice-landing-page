@@ -18,3 +18,9 @@ if (toggle) {
         document.documentElement.dataset.theme = isDark ? "light" : "dark";
     });
 }
+
+let firstName = "Gay"
+let lastName = "Whore"
+
+console.log(firstName)
+console.log(lastName)

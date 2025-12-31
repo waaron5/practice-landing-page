@@ -149,6 +149,7 @@ h4 {
     max-height: 240px;
     object-fit: contain;
     display: block;
+    margin-left: 2rem;
 }
 
 .feature-card-section {
